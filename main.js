@@ -21,7 +21,7 @@ const servers = {
 
 let init = async () => {
     client = await AgoraRTM.createInstance(APP_ID)
-    await client.login(uid, token)
+    await client.login({uid, token})
     
     //index.html?room=232323
     channel = client.createChannel('main')
