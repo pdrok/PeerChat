@@ -1,4 +1,4 @@
-let APP_ID = ''
+let APP_ID = 'YOUR_APP_ID'
 
 
 let token = null;
@@ -50,7 +50,7 @@ let init = async () => {
 
     client.on('MessageFromPeer', handleMessageFromPeer)
 
-    localStream = await navigator.mediaDevices.getUserMedia(constraints)
+    localStream = await navigator.mediaDevices.getUserMedia({video:true, audio:false})
     document.getElementById('user-1').srcObject = localStream
 }
 
