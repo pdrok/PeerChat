@@ -1,4 +1,4 @@
-let APP_ID = 'YOUR_APP_ID'
+let APP_ID = 'd0c0465984c3439c9f1eb7ba00cf2da8'
 
 
 let token = null;
@@ -50,7 +50,7 @@ let init = async () => {
 
     client.on('MessageFromPeer', handleMessageFromPeer)
 
-    localStream = await navigator.mediaDevices.getUserMedia({video:true, audio:false})
+    localStream = await navigator.mediaDevices.getUserMedia({video:true, audio:true})
     document.getElementById('user-1').srcObject = localStream
 }
 
@@ -93,7 +93,7 @@ let createPeerConnection = async (MemberId) => {
     document.getElementById('user-1').classList.add('smallFrame')
 
     if(!localStream){
-        localStream = await navigator.mediaDevices.getUserMedia({video:true, audio:false})
+        localStream = await navigator.mediaDevices.getUserMedia({video:true, audio:true})
         document.getElementById('user-1').srcObject = localStream
     }
 
